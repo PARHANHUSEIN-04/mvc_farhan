@@ -31,27 +31,40 @@
  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
  <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/43.3.0/ckeditor5.css">
 
- <style type="text/css">
- 	
- 	@import  url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
- 	.main-container {
-	font-family: 'Lato';
-	width: fit-content;
-	margin-left: auto;
-	margin-right: auto;
-}
+<style type="text/css">
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-.ck-content {
-	font-family: 'Lato';
-	line-height: 1.6;
-	word-break: break-word;
-}
+  .main-container {
+    font-family: 'Lato';
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f9f9f9; /* Warna latar belakang */
+    color: #333; /* Warna teks */
+    padding: 20px; /* Menambahkan padding */
+    border-radius: 8px; /* Membuat sudut melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  }
 
-.editor-container_classic-editor .editor-container__editor {
-	min-width: 795px;
-	max-width: 795px;
-}
- </style>
+  .ck-content {
+    font-family: 'Lato';
+    line-height: 1.6;
+    word-break: break-word;
+    background-color: #fff; /* Warna latar belakang editor */
+    color: #444; /* Warna teks editor */
+    padding: 15px; /* Menambahkan padding */
+    border: 1px solid #ddd; /* Menambahkan garis batas */
+    border-radius: 6px; /* Membuat sudut melengkung */
+  }
+
+  .editor-container_classic-editor .editor-container__editor {
+    min-width: 795px;
+    max-width: 795px;
+    background-color: #f4f4f4; /* Warna latar belakang editor */
+    border: 1px solid #ccc; /* Warna garis batas */
+    border-radius: 5px; /* Membuat sudut melengkung */
+  }
+</style>
 
 
 </head>
@@ -61,7 +74,7 @@
 		<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
 				<a class="sidebar-brand" href="/adminabsensi" style="text-decoration: none;">
-         <img src="{{asset('admin.png')}}" style="width:200px"><br><br><span>Administrator <br>Management pelanggan</span>
+         <img src="{{asset('image.jpg')}}" style="width:200px"><br><br><span> Data Pelanggan Laundry</span>
         </a>
 
 				<ul class="sidebar-nav">
@@ -264,10 +277,10 @@
 												<th>Nama Pelanggan</th>
 												<th>Alamat Pelanggan</th>
 												<th>No Hp Pelanggan</th>
-												<th>No KTP Pelanggan </th>
-												<th>Seri Pelanggan</th>
-												<th>Meteran Pelanggan</th>
-												<th>Status Aktif Pelanggan</th>
+												<th>No Struk Pelanggan </th>
+												<th>Total harga</th>
+												<th>Jumlah KG</th>
+												<th>Status dibayar</th>
 												<th>Id User Pelanggan</th>
 												<th>Created At</th>
 												<th>Update At</th>
@@ -404,7 +417,7 @@
                 
                 <br>
 
-                 <p class="text-muted mb-3">Nomor KTP Pelanggan <span style="color:red;">(Wajib)</span> &nbsp;&nbsp;&nbsp; @error('nama')
+                 <p class="text-muted mb-3">Nomor Struk Pelanggan <span style="color:red;">(Wajib)</span> &nbsp;&nbsp;&nbsp; @error('nama')
                                       
                                        <div class="alert alert-danger alert-dismissible fade show" style="height:50px !important;">
                       <ul>
@@ -422,7 +435,7 @@
                 
                 <br>
 
-                  <p class="text-muted mb-3">Nomor Seri Pelanggan <span style="color:red;">(Wajib)</span> &nbsp;&nbsp;&nbsp; @error('nama')
+                  <p class="text-muted mb-3">Total Harga <span style="color:red;">(Wajib)</span> &nbsp;&nbsp;&nbsp; @error('nama')
                                       
                                        <div class="alert alert-danger alert-dismissible fade show" style="height:50px !important;">
                       <ul>
@@ -440,7 +453,7 @@
                 
                 <br>
 
-                  <p class="text-muted mb-3">Nomor Meteran Pelanggan <span style="color:red;">(Wajib)</span> &nbsp;&nbsp;&nbsp; @error('nama')
+                  <p class="text-muted mb-3">Jumlah KG <span style="color:red;">(Wajib)</span> &nbsp;&nbsp;&nbsp; @error('nama')
                                       
                                        <div class="alert alert-danger alert-dismissible fade show" style="height:50px !important;">
                       <ul>
@@ -455,7 +468,7 @@
                 <input type="number" style="z-index: 1056 !important;" class="form-control" name="pelmeteran" />
                 <br>
                 <select class="form-control" name="peliduser">
-                	<option>Pilih ID USERr</option>
+                	<option>Pilih ID USER</option>
                 	<?php foreach ($user as $user): ?>
                 		<option value="{{$user->user_id}}">{{$user->user_nama}}</option>
                 	<?php endforeach ?>
@@ -463,10 +476,10 @@
 
 
                 <select class="form-control" name="status">
-                	<option>Pilih STATUS AKTIF PELANGGAN</option>
+                	<option> STATUS DIBAYAR</option>
                 	
-                		<option value="Y">Aktif</option>
-                			<option value="N">Tidak Aktif</option>
+                		<option value="Y">YES</option>
+                			<option value="N">NO</option>
                 	
                 </select><br>
 

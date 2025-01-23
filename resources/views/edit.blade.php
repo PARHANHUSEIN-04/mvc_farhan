@@ -86,7 +86,7 @@
                 
                 <br>
 
-                  <p class="text-muted mb-3">Nomor Seri Pelanggan <span style="color:red;">(Wajib)</span> &nbsp;&nbsp;&nbsp; @error('nama')
+                  <p class="text-muted mb-3">Total harga <span style="color:red;">(Wajib)</span> &nbsp;&nbsp;&nbsp; @error('nama')
                                       
                                        <div class="alert alert-danger alert-dismissible fade show" style="height:50px !important;">
                       <ul>

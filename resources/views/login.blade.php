@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login Administrator</title>
+  <title>Login </title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
@@ -30,14 +30,14 @@ a{color:inherit;text-decoration:none}
   position:relative;
   margin-top: 5%;
   background:url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;
-  box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+  box-shadow:0 12px 15px 0 rgba(2, 47, 65, 0.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
 .login-html{
   width:100%;
   height:100%;
   position:absolute;
   padding:90px 70px 50px 70px;
-  background:rgba(40,57,101,.9);
+  background:rgba(18, 22, 19, 0.9);
 }
 .login-html .sign-in-htm,
 .login-html .sign-up-htm{
@@ -113,7 +113,7 @@ a{color:inherit;text-decoration:none}
   border-radius:2px;
   position:relative;
   display:inline-block;
-  background:rgba(255,255,255,.1);
+  background:rgba(190, 131, 20, 0.86);
 }
 .login-form .group label .icon:before,
 .login-form .group label .icon:after{
@@ -175,7 +175,7 @@ a{color:inherit;text-decoration:none}
         <!-- <img src="https://bpsdm.sumutprov.go.id/utama/images/logoprovsu.png" style="display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;margin-top: 20%;"> --><br><h5 style="color:white;text-align: center;">Sistem Aplikasi Management Pelanggan</h5 ><br><br>
+  width: 30%;margin-top: 20%;"> --><br><h5 style="color:white;text-align: center;">Silahkan Login Terlebih Dahulu</h5 ><br><br>
         <div class="group">
           <label for="user" class="label">Username</label>
           <input id="user" type="text" class="input" name="username">
@@ -193,7 +193,7 @@ a{color:inherit;text-decoration:none}
       </div>
       </form>
       <div class="sign-up-htm">
-        <strong><h3 style="color: white;">Sistem Management Pelanggan By Rizka</h3></strong>
+        <strong><h3 style="color: white;">Hallo </h3></strong>
       </div>
     </div>
   </div>
